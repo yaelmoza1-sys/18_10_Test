@@ -1,82 +1,100 @@
-
 /* רקע עמוד */
-body{
-background-color: #0c0d12;
-margin-top: 0px;
+body {
+    background-color: #0c0d12;
+    margin-top: 0px;
 }
+
 /* חלק עליון */
-header{
-width: 90%;
-margin: 20px auto;
-margin-top: 0px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 10px 20px;
-border: 1px solid #22253b;
+header {
+    width: 90%;
+    margin: 20px auto;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #22253b;
 }
+
 /* אייקון מגן */
-header span{
-width: 24px;
-height: 24px;
-border-radius: 50%;
-background-color: #00ff26;
+header span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #00ff26;
 }
+
 /* כותרת עליונה */
-header p{
-color: #00ff26;
-margin: 0px;
+header p {
+    color: #00ff26;
+    margin: 0px;
 }
+
 /* כפתור צד ימין */
-header .btn{
-background-color: transparent;
-color: #00ff26;
-border: 1px solid #00ff26;
-border-radius: 20px;
-padding: 6px 15px;
-font-size: 12px;    
+header .btn {
+    background-color: transparent;
+    color: #00ff26;
+    border: 1px solid #00ff26;
+    border-radius: 20px;
+    padding: 6px 15px;
+    font-size: 12px;
 }
+
 /* חלק מרכזי סורק וספירה */
 main {
-width: 85%;
-height: 300px;
-margin: 20px auto;
-background-color: #13141f;
-border-radius: 12px;
-border: 1px solid #22253b;
+    width: 85%;
+    height: 300px;
+    margin: 20px auto;
+    background-color: #13141f;
+    border-radius: 12px;
+    border: 1px solid #22253b;
 
-display: flex;         
-align-items: center;
-justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
 /* קוד מיובא לסורק */
-.radar, .sweep { position: relative; }
-.radar {
-  overflow: hidden; 
-  margin: 0px;
-  width: 248px; height: 248px;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.5),
-    inset 0 0 0 1px hsla(0, 0%, 100%, 0.15);
-  background: 
-    repeating-radial-gradient(transparent 0 23px, #287a33 24px 26px, #0000 27px), 
-    linear-gradient(transparent 49.75%, #0e4c42 0 50.25%, transparent 0) 50% no-repeat,
-    linear-gradient(90deg, transparent 49.75%, #0e4c42 0 50.25%, transparent 0) 50% no-repeat,
-    linear-gradient(#333, #111);
-  background-size: 100%, 218px 218px, 218px 218px, 100%;
-}
+.radar,
 .sweep {
-  box-sizing: border-box;
-  top: 16px; left: 16px;
-  border-right: solid 1px hsla(145, 50%, 40%, .3);
-  width: 108px; height: 108px;
-  border-radius: 100% 0 0 0;
-  transform-origin: 100% 100%;
-  background: linear-gradient(50deg, rgba(34, 34, 34, 0) 56%, hsla(145, 50%, 40%, 1));
-  animation: sweep 5s infinite linear;
+    position: relative;
 }
-@keyframes sweep { to { transform: rotate(360deg); } }
- 
+
+.radar {
+    overflow: hidden;
+    margin: 0px;
+    width: 248px;
+    height: 248px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.5),
+        inset 0 0 0 1px hsla(0, 0%, 100%, 0.15);
+    background:
+        repeating-radial-gradient(transparent 0 23px, #287a33 24px 26px, #0000 27px),
+        linear-gradient(transparent 49.75%, #0e4c42 0 50.25%, transparent 0) 50% no-repeat,
+        linear-gradient(90deg, transparent 49.75%, #0e4c42 0 50.25%, transparent 0) 50% no-repeat,
+        linear-gradient(#333, #111);
+    background-size: 100%, 218px 218px, 218px 218px, 100%;
+}
+
+.sweep {
+    box-sizing: border-box;
+    top: 16px;
+    left: 16px;
+    border-right: solid 1px hsla(145, 50%, 40%, .3);
+    width: 108px;
+    height: 108px;
+    border-radius: 100% 0 0 0;
+    transform-origin: 100% 100%;
+    background: linear-gradient(50deg, rgba(34, 34, 34, 0) 56%, hsla(145, 50%, 40%, 1));
+    animation: sweep 5s infinite linear;
+}
+
+@keyframes sweep {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 /* נקודות על הסורק */
 .dot {
     position: absolute;
@@ -86,22 +104,83 @@ justify-content: space-around;
     border-radius: 50%;
     box-shadow: 0 0 8px #00ff26;
 }
-.d1{top:50%; left: 40%;}
-.d2{top:65%; left: 70%;}
-.d3{top:25%; left: 55%;}
+
+.d1 {
+    top: 50%;
+    left: 40%;
+}
+
+.d2 {
+    top: 65%;
+    left: 70%;
+}
+
+.d3 {
+    top: 25%;
+    left: 55%;
+}
 
 
 /* המספרים ליד הסורק */
-  main h2{
+main h2 {
     color: #00ff26;
-  }
-  main p{
-    color: #a0aab8; 
-  }
-  /* חלק שלישי שורת כפתורים */
-  footer{
+}
+
+main p {
+    color: #a0aab8;
+}
+
+/* חלק שלוש כפתורים */
+.buttons{
+    width: 85%;
+    margin: 20px auto;
     display: flex;
-    justify-content: space-between; 
+    gap: 10px;
+}
+.buttons .b1, .b2, .b3{
+    width: 160px;
+    height: 50px;
+    background-color: #13141f;
+    border-radius: 12px;
+    border: 1px solid #22253b; 
+    color: white;
+}
+
+
+/* שורת אזהרה */
+.threat {
+    position: relative;             
+    display: flex;
+    justify-content: center;        
+    
+    background-color: #1a080c;      
+    border: 1px solid #731324;      
+    border-radius: 6px;             
+    
+    padding: 13px 20px;            
+    margin: 20px auto;    
+    width: 85%;               
+    
+    color: #ff2a4b;                
+    font-weight: bold;
+    font-family: 'Courier New';
+    font-size: 14px;
+}
+
+.threat-dot {
+    position: absolute;
+    left: 10px;
+    top: 10%;
+    width: 9px;
+    height: 9px;
+    background-color: #ff2a4b;
+    border-radius: 50%;
+}
+
+/* חלק תחתון */
+footer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     border-top: 1px solid #1c1f2e;
     padding: 20px 30px;
@@ -110,13 +189,15 @@ justify-content: space-around;
     left: 0;
     width: 100%;
     box-sizing: border-box;
-  }
-  .footer_center{
+}
+
+.footer_center {
     display: flex;
     gap: 500px;
-    margin: 0 auto; 
-  }
-  .footer_items{
+    margin: 0 auto;
+}
+
+.footer_items {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -125,11 +206,13 @@ justify-content: space-around;
     font-family: 'Courier New', monospace;
     font-size: 11px;
     cursor: pointer;
-  }
-  .material-symbols-outlined{
+}
+
+.material-symbols-outlined {
     font-size: 20px;
-  }
-  .footer_right{
+}
+
+.footer_right {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,7 +221,8 @@ justify-content: space-around;
     border: 1px solid #22253b;
     border-radius: 50%;
     background-color: #13141f;
-  }
-  .Search{
-    color:#22253b;
-  }
+}
+
+.Search {
+    color: #22253b;
+}
